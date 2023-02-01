@@ -10,6 +10,10 @@
   font-family: "Overpass";
   src: url(Overpass-Regular.ttf);
 }
+* {
+  box-sizing: border-box;
+}
+
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   margin: 0;
   padding: 0;
@@ -21,7 +25,6 @@ body {
   height: 100vh;
   width: 100vw;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)), url(weallscream.jpg);
-  background-blend-mode: multiply;
   background-size: cover;
   -webkit-backdrop-filter: brightness(150%) saturate(150%);
           backdrop-filter: brightness(150%) saturate(150%);
@@ -40,7 +43,7 @@ p, li {
 }
 
 nav {
-  padding: 30px 20%;
+  padding: 20px 20%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -58,6 +61,23 @@ nav h2 {
 }
 
 main {
-  padding: 10px 20%;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.4);
+  margin: 0px 20%;
+  height: calc(100% - 150px);
+  position: relative;
+  padding: 20px;
   color: white;
+}
+main::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(twill.jpeg);
+  opacity: 0.6;
 }/*# sourceMappingURL=style.css.map */
