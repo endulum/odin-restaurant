@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "PoppinsEL";
+  src: url(Poppins-ExtraLight.ttf);
+}
+@font-face {
+  font-family: "PoppinsM";
+  src: url(Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: "Overpass";
+  src: url(Overpass-Regular.ttf);
+}
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)), url(weallscream.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  -webkit-backdrop-filter: brightness(150%) saturate(150%);
+          backdrop-filter: brightness(150%) saturate(150%);
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+  font-family: "PoppinsEL", sans-serif;
+}
+h1 b, h2 b, h3 b {
+  font-family: "PoppinsM";
+}
+
+p, li {
+  font-family: "Overpass", sans-serif;
+}
+
+nav {
+  padding: 30px 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+nav h2 {
+  font-size: 2rem;
+}
+
+main {
+  padding: 10px 20%;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
