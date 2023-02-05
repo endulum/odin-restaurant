@@ -73,4 +73,6 @@ export default function loadHome() {
     catering.appendChild(cateringH3);
     catering.appendChild(cateringH2);
     catering.appendChild(cateringDescription);
+
+    $('#cred').innerHTML = 'Photos &copy; Jeswin Thomas, Pablo Merchán Montes, Erwan Hesry on Unsplash.';
 }

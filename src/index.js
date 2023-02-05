@@ -12,6 +12,14 @@ import {$, content} from './pages/base.js';
     nav.id = 'nav';
     db.appendChild(nav);
 
+    // build footer
+    let footer = document.createElement('footer');
+    footer.innerHTML = 'Copyright &copy; 2023 endulum, courtesy of The Odin Project.<br>';
+    let photoCred = document.createElement('small');
+    photoCred.id = 'cred';
+    db.appendChild(footer);
+    footer.appendChild(photoCred);
+
     // build logo
     let logoText = document.createElement('h2');
     logoText.textContent = 'FUTURE';
