@@ -1,42 +1,29 @@
 import './style.scss';
 import loadHome from './pages/home.js'
-import loadFlavors from './pages/flavors.js';
-import loadContact from './pages/contact.js';
-import loadAbout from './pages/about.js';
+// import _ from './pages/flavors.js';
+// import _ from './pages/contact.js';
+// import _ from './pages/about.js';
+import {$, content} from './pages/base.js';
 
-(doc => {
+(db => {
 
-    // const doThing = function() {
-    //     console.warn('thing is being done...');
-    // }
-
+    // build navigation bar
     let nav = document.createElement('nav');
-    doc.appendChild(nav);
+    nav.id = 'nav';
+    db.appendChild(nav);
 
-    let main = document.createElement('main');
-    main.id = 'main';
-    doc.appendChild(main);
+    // build logo
+    let logoText = document.createElement('h2');
+    logoText.textContent = 'FUTURE';
+    let logo = document.createElement('b');
+    logo.textContent = 'FREEZE';
+    nav.appendChild(logoText);
+    logoText.appendChild(logo);
+
+    logo.addEventListener('click', loadHome);
+
+    db.appendChild(content);
 
     loadHome();
 
-    let logo = document.createElement('h2');
-    logo.innerHTML = 'FUTURE<b id="home">FREEZE</b>';
-    nav.appendChild(logo);
-    document.getElementById('home').addEventListener('click', loadHome);
-
-    let navigation = document.createElement('ul');
-    nav.appendChild(navigation);
-
-    const createNavLink = function(linkName, destination) {
-        let link = document.createElement('li');
-        link.addEventListener('click', destination);
-        link.id = linkName.toLowerCase();
-        link.textContent = linkName;
-        navigation.appendChild(link);
-    }
-
-    createNavLink('Flavors', loadFlavors);
-    createNavLink('About', loadAbout);
-    createNavLink('Contact', loadContact);
-    
 })(document.body);
