@@ -4,7 +4,8 @@ import loadHome from './pages/home.js'; // DONE!
 // import _ from './pages/contact.js';
 // import _ from './pages/about.js';
 import {$, content} from './pages/base.js';
-import loadFlavors from './pages/flavors';
+import loadFlavors from './pages/flavors.js';
+import loadAbout from './pages/about.js';
 
 (db => {
     const doSomething = () => console.warn('something is done');
@@ -38,10 +39,17 @@ import loadFlavors from './pages/flavors';
     linkFlavors.addEventListener('click', loadFlavors);
     links.appendChild(linkFlavors);
 
+    let linkAbout = document.createElement('li');
+    linkAbout.textContent = 'About';
+    linkAbout.addEventListener('click', loadAbout);
+    links.appendChild(linkAbout);
+
     db.appendChild(content);
 
     // tie home content together
     logo.addEventListener('click', loadHome);
-    loadHome();
+    // loadHome();
+
+    loadAbout();
 
 })(document.body);

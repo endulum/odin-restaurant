@@ -135,6 +135,7 @@ main {
     // border: 1px solid $test;
     color: white;
     margin: 20px 20% 20px 20%;
+    margin-bottom: 100px;
 }
 
 #hero {
@@ -252,7 +253,7 @@ main {
         font-size: 0.85rem;
         b {
             font-size: 0.95rem;
-            margin-right: 5px;
+            margin-left: 5px;
         }
     }
     .dot {
@@ -262,6 +263,59 @@ main {
         border-radius: 100% 0% 100% 100%;
         display: inline-block;
         // border: 1px solid black;
+    }
+}
+
+.about {
+    width: 100%;
+    height: min-content;
+    background: white;
+    padding: 15px;
+    border-radius: 0 15px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    .text {
+        width: calc(100% - 500px);
+    }
+    .left, .right {
+        background-size: cover;
+        background-position: center;
+        width: 250px;
+        // height: calc(100% + 28px);
+        margin: -14px -14px -14px -14px;
+        position: relative;
+        overflow: hidden;
+        &::after {
+            position: absolute;
+            font: 0.85rem 'Overpass', sans-serif;
+            color: white;
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+            max-width: 100%;
+            bottom: 0;
+            padding: 10px;
+            text-align: center;
+        }
+    } .left {
+        border-bottom-left-radius: 15px;
+        &::after {
+            content: 'The very first flavor crafted in the labs of Future Freeze, an early prototype of Toasty Cottage.';
+        }
+    } .right {
+        border-top-right-radius: 15px;
+        &::after {
+            content: 'The all-time most popular flavor among fans of the Future Freeze catalog, Ocean\'s Affair.';
+        }
+    } h2 {
+        font-family: 'PoppinsM', sans-serif;
+        // margin-bottom: 10px;
+    } h3 {
+        margin-top: 15px;
+    } p {
+        font-family: 'Overpass', sans-serif;
+        margin-top: 5px;
     }
 }
 

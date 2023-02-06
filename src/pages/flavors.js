@@ -4,7 +4,6 @@ import Popsicles from '../assets/summerpopsicles.png';
 
 export default function loadFlavors() {
     console.warn('loadFlavors invoked.');
-    content.style.marginBottom = '100px';
     empty();
 
     // first level
@@ -15,7 +14,7 @@ export default function loadFlavors() {
 
     let coreImage = document.createElement('div');
     coreImage.style.backgroundImage = `url(${Cone})`;
-    coreImage.style.backgroundPositionX = 'center';
+    coreImage.style.backgroundPosition = 'center';
     core.appendChild(coreImage);
     
     let coreDiv = document.createElement('div');
@@ -87,10 +86,10 @@ export default function loadFlavors() {
     for (let i = 0; i < coreFlavorNames.length; i++) {
         let flavor = document.createElement('li');
         flavor.innerHTML = `
-            <b>${coreFlavorNames[i]}</b>
             <div class='dot' style='background-color: #${coreFlavorColors[i][0]}'></div>
             <div class='dot' style='background-color: #${coreFlavorColors[i][1]}'></div>
             <div class='dot' style='background-color: #${coreFlavorColors[i][2]}'></div>
+            <b>${coreFlavorNames[i]}</b>
             <br>${coreFlavorDescriptions[i]}`;
         coreMenuList.appendChild(flavor);
     }
@@ -123,10 +122,10 @@ export default function loadFlavors() {
     for (let i = 0; i < popsiclesFlavorNames.length; i++) {
         let flavor = document.createElement('li');
         flavor.innerHTML = `
-            <b>${popsiclesFlavorNames[i]}</b>
             <div class='dot' style='background-color: #${popsiclesFlavorColors[i][0]}'></div>
             <div class='dot' style='background-color: #${popsiclesFlavorColors[i][1]}'></div>
             <div class='dot' style='background-color: #${popsiclesFlavorColors[i][2]}'></div>
+            <b>${popsiclesFlavorNames[i]}</b>
             <br>${popsiclesFlavorDescriptions[i]}`;
         popsiclesMenuList.appendChild(flavor);
     }
