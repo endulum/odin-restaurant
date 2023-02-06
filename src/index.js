@@ -52,8 +52,6 @@ import loadContact from './pages/contact.js';
 
     // tie home content together
     logo.addEventListener('click', loadHome);
-    // loadHome();
-
-    loadContact();
+    loadHome();
 
 })(document.body);
