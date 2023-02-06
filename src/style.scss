@@ -319,6 +319,37 @@ main {
     }
 }
 
+.people {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    .person {
+        background: white;
+        padding: 15px;
+        border-radius: 0 15px;
+        color: black;
+        width: 100%;
+    }
+    .image {
+        width: calc(100% + 28px);
+        height: 200px;
+        margin: -14px -14px 14px -14px;
+        border-top-right-radius: 15px;
+        background-size: cover;
+        background-position: center;
+    } h2, h3 {
+        text-transform: uppercase;
+    } h2 {
+        font-family: 'PoppinsM', sans-serif;
+        font-size: 1.25rem;
+    } h3 {
+        font-size: 1rem;
+    }
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -328,4 +359,7 @@ footer {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
+    a {
+        color: white;
+    }
 }

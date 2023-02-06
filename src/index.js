@@ -1,11 +1,10 @@
 import './style.scss';
-import loadHome from './pages/home.js'; // DONE!
-// import _ from './pages/flavors.js';
-// import _ from './pages/contact.js';
-// import _ from './pages/about.js';
 import {$, content} from './pages/base.js';
+
+import loadHome from './pages/home.js';
 import loadFlavors from './pages/flavors.js';
 import loadAbout from './pages/about.js';
+import loadContact from './pages/contact.js';
 
 (db => {
     const doSomething = () => console.warn('something is done');
@@ -44,12 +43,17 @@ import loadAbout from './pages/about.js';
     linkAbout.addEventListener('click', loadAbout);
     links.appendChild(linkAbout);
 
+    let linkContact = document.createElement('li');
+    linkContact.textContent = 'Contact';
+    linkContact.addEventListener('click', loadContact);
+    links.appendChild(linkContact);
+
     db.appendChild(content);
 
     // tie home content together
     logo.addEventListener('click', loadHome);
     // loadHome();
 
-    loadAbout();
+    loadContact();
 
 })(document.body);
