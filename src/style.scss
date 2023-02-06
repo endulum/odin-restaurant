@@ -62,9 +62,14 @@ body {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0)), url(./assets/weallscream.png);
     background-size: cover;
     background-attachment: fixed;
+    scrollbar-width: none;
     p {
         font-size: 0.85rem;
     }
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 nav {

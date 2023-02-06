@@ -1,5 +1,5 @@
 import './style.scss';
-// import loadHome from './pages/home.js'; DONE!
+import loadHome from './pages/home.js'; // DONE!
 // import _ from './pages/flavors.js';
 // import _ from './pages/contact.js';
 // import _ from './pages/about.js';
@@ -30,21 +30,18 @@ import loadFlavors from './pages/flavors';
     nav.appendChild(logoText);
     logoText.appendChild(logo);
 
-    // let links = document.createElement('ul');
-    // nav.appendChild(links);
+    let links = document.createElement('ul');
+    nav.appendChild(links);
 
-    // let linkFlavors = document.createElement('li');
-    // linkFlavors.textContent = 'Flavors';
-    // linkFlavors.addEventListener('click', doSomething);
-    // links.appendChild(linkFlavors);
+    let linkFlavors = document.createElement('li');
+    linkFlavors.textContent = 'Flavors';
+    linkFlavors.addEventListener('click', loadFlavors);
+    links.appendChild(linkFlavors);
 
     db.appendChild(content);
 
     // tie home content together
-    // logo.addEventListener('click', loadHome);
-    // loadHome();
-
-    loadFlavors();
-    
+    logo.addEventListener('click', loadHome);
+    loadHome();
 
 })(document.body);
